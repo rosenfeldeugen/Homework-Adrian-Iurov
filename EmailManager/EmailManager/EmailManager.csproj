@@ -56,7 +56,7 @@
     <Compile Include="Core\Model\HolidayRequest.cs" />
     <Compile Include="Core\Model\HR.cs" />
     <Compile Include="Infrastructure\MailSender.cs" />
-    <Compile Include="Core\InjectedInterfaces\IEmailService.cs" />
+    <Compile Include="Core\InjectedInterfaces\IMessageDispatcher.cs" />
     <Compile Include="Core\Model\Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
