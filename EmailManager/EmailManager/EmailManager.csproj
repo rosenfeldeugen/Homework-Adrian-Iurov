@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Model\BaseUser.cs" />
     <Compile Include="Core\Services\HolidayRequestApproveMessageGenerator.cs" />
     <Compile Include="Core\Services\HolidayRequestRejectMessageGenerator.cs" />
     <Compile Include="Core\Services\BaseMessageGenerator.cs" />

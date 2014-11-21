@@ -1,27 +1,12 @@
 ﻿namespace EmailManager
 {
-    public class Employee: IMessageContact
+    public class Employee: BaseUser
     {
-        protected IMessageDispatcher _messageDispatcher;  
+        private IMessageDispatcher _messageDispatcher;  
 
-        public string Name { get; private set; }
-
-        public string Email { get; private set; }
-
-        public string InboxAddress
-        {
-            get { return Email; }
-        }
-        public Manager Manager { get; private set; }
-
-
-
-        public Employee(IMessageDispatcher messageDispatcher, string email, string name, Manager manager)
+        public Employee(IMessageDispatcher messageDispatcher, string email, string name, Manager manager): base(email, name, manager)
         {
             _messageDispatcher = messageDispatcher;
-            Email = email;
-            Name = name;
-            Manager = manager;
         }
 
         public void SubmitHolidayRequest(HolidayRequest holidayRequest)

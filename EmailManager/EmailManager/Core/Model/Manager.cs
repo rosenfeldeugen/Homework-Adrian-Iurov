@@ -2,10 +2,21 @@
 
 namespace EmailManager
 {
-    public class Manager : Employee
+    public class Manager : BaseUser
     {
+        private IMessageDispatcher _messageDispatcher;  
+
+        public Manager(IMessageDispatcher messageDispatcher, string email, string name)
+            : this(messageDispatcher, email, name, null)
+        {
+            Manager = this;
+        }
+
         public Manager(IMessageDispatcher messageDispatcher, string email, string name, Manager manager)
-            : base (messageDispatcher, email, name, manager) { }
+            : base(email, name, manager)
+        {
+            _messageDispatcher = messageDispatcher;
+        }
 
         public void ApproveHolidayRequest(HolidayRequest holidayRequest, HR hr)
         {
