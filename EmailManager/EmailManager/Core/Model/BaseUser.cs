@@ -7,8 +7,10 @@ namespace EmailManager
 
         public string Email { get; private set; }
        
+        //CR: The employee should have a manager. Or even better, the HolidayRequest should have an approver.
         public Manager Manager { get; protected set; }
 
+        //CR: this is not needed
         public string InboxAddress
         {
             get { return Email; }

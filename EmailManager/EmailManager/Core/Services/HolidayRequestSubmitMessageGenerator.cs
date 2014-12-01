@@ -17,7 +17,8 @@ namespace EmailManager
                 Body = GenerateEmailBody()
             };
         }
-
+        
+        //CR: quite complicated. It is very hard to understand what's happened.
         private String GenerateEmailBody()
         {
             StringBuilder sb = new StringBuilder();
